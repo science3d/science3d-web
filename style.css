@@ -14,13 +14,15 @@ body{
 }
 
 header{
-	height:100vh;
+	height: 100vh;
+	position: relative;
+	display: flex;
 }
 
 .cover {
 	height: 100%;
 	position: absolute;
-	width: 100;
+	width: 100%;
 	top: 0;
 	right: 0;
 	object-fit: cover;
