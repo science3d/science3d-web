@@ -32,7 +32,7 @@ header{
 
 .cover-date{
 	position: absolute;
-	left: 10%;
+	right: 10%;
 	bottom: 10%;
 	opacity: 0.5;
 	color: blue;
@@ -64,13 +64,13 @@ nav{
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	opacity: 0.5;
+	opacity: 0;
 	pointer-events: none;
 }
 
 .nav-closed ul{
 	display: flex;
-	width: 50%
+	width: 70%
 	justify-content:space-around;
 	list-style: none;
 }
