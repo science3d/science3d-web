@@ -66,6 +66,7 @@ nav{
 	align-items: center;
 	opacity: 0;
 	pointer-events: none;
+	background-color: black;
 }
 
 .nav-closed ul{
