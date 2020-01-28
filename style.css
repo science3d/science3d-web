@@ -24,7 +24,7 @@ header{
 	position: absolute;
 	width: 100%;
 	top: 0;
-	right: 0;
+	left: 0;
 	object-fit: cover;
 	object-position: top;
 	z-index: 0;
@@ -36,6 +36,11 @@ header{
 	bottom: 10%;
 	opacity: 0.5;
 	color: blue;
+}
+
+.nav-links{
+	justify-content: space-around;
+	display: flex;
 }
 
 nav{
@@ -65,7 +70,7 @@ nav{
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	opacity: 0;
+	opacity: 0.5;
 	pointer-events: none;
 }
 
