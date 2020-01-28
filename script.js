@@ -1,7 +1,7 @@
 const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
 
-console.log("Hello world!");
+alert("It works!");
 
 const tw = TweenLite.to(".cover",1,{width: "40%"});
 
