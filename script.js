@@ -3,8 +3,7 @@ const navOpen = document.querySelector('.nav-open');
 
 //alert("It worksss!");
 //console.log("Hi!");
-
-const tw = TweenLite.to(".cover",1,{width: "40%"});
+//const tw = TweenLite.to(".cover",1,{width: "40%"});
 
 const tl = new TimelineLite({ paused: true, reversed: true });
 
