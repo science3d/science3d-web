@@ -8,7 +8,7 @@ const navOpen = document.querySelector('.nav-open');
 const tl = new TimelineLite({ paused: true, reversed: true });
 
 tl.to(".cover",1, {
-	left: "40%",
+	//left: "40%",
 	ease: Power2.easeOut
 })
 .to(
