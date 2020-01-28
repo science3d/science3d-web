@@ -1,6 +1,8 @@
 const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
 
+console.log("Hello world!");
+
 const tl = new TimelineLite({ paused: true, reversed: true });
 
 tl.to(".cover",1, {
@@ -43,5 +45,5 @@ navButton.addEventListener ("click", () =>{
 });
 
 function toggleTween (tween){
-	tween.reversed() ? tween.play() : tween.reverve();
+	tween.reversed() ? tween.play() : tween.reverse();
 }
