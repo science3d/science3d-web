@@ -35,7 +35,7 @@ header{
 	right: 10%;
 	bottom: 10%;
 	opacity: 0.5;
-	color: blue;
+	color: #2D83C4;
 }
 
 .nav-links{
@@ -75,7 +75,7 @@ nav{
 
 .nav-closed ul{
 	display: flex;
-	width: 70%
+	width: 50%
 	justify-content: space-around;
 	list-style: none;
 }
