@@ -31,6 +31,7 @@ tl.to(".cover",1, {
 		x: 0,
 		onComplete: function(){
 			navOpen.style.pointerEvents = "auto";
+			console.log ("done");
 		}
 	}
 );
