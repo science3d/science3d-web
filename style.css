@@ -10,7 +10,7 @@ body{
 	width: 100%;
 	font-family: "Abel", san-serif;
 	font-size: 18px;
-	background: white;
+	background: gray;
 }
 
 header{
@@ -24,7 +24,7 @@ header{
 	position: absolute;
 	width: 100%;
 	top: 0;
-	left: 0;
+	right: 0;
 	object-fit: cover;
 	object-position: top;
 	z-index: 0;

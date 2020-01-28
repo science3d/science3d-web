@@ -1,8 +1,8 @@
 const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
 
-alert("It worksss!");
-console.log("Hi!");
+//alert("It worksss!");
+//console.log("Hi!");
 
 const tw = TweenLite.to(".cover",1,{width: "40%"});
 
@@ -39,7 +39,7 @@ tl.to(".cover",1, {
 	}
 );
 
-navButton.addEventListener ("click", () =>{
+navButton.addEventListener ("click", (e) =>{
 	if (tl.isActive()){
 		e.preventDefault();
 		e.stopImmediatePropagation();
