@@ -38,6 +38,15 @@ tl.to(".cover",1, {
 	}
 );
 
+navButton.addEventListener("mouseenter", () =>{
+	tween.reversed() ? tween.play();
+});
+
+navOpen.addEventListener("mouseleave",() =>{
+	tween.reverse();
+});
+
+/*
 navButton.addEventListener ("click", (e) =>{
 	if (tl.isActive()){
 		e.preventDefault();
@@ -50,3 +59,5 @@ navButton.addEventListener ("click", (e) =>{
 function toggleTween (tween){
 	tween.reversed() ? tween.play() : tween.reverse();
 }
+*/
+
