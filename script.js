@@ -39,7 +39,7 @@ tl.to(".cover",1, {
 );
 
 navButton.addEventListener("mouseenter", () =>{
-	tween.reversed() ? tween.play();
+	tween.play();
 });
 
 navOpen.addEventListener("mouseleave",() =>{
