@@ -40,7 +40,7 @@ tl.to(".cover",1, {
 
 navButton.addEventListener("mouseenter", tween.play());
 
-
+/*
 navOpen.addEventListener("mouseleave", () =>{
 	rev = setTimeout(tween.reverse(), 1000);
 });
