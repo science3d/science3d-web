@@ -1,9 +1,10 @@
 const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
+const navEl = document.getElementById("navv");
 
 //alert("It worksss!");
 //console.log("Hi!");
-const tw = TweenLite.fromTo(".nav-closed", 2, {opacity: 0, ease: Power2.easeOut}, {opacity: 0.5});
+const tw = TweenLite.fromTo(".nav-closed", 2, {opacity: 0, ease: Power2.easeOut}, {opacity: 0.7});
 
 //const tl = new TimelineLite({ paused: true, reversed: true });
 
@@ -44,7 +45,7 @@ tl.to(".cover",1, {
 navButton.addEventListener("mouseenter", () => {tl.play();});
 
 
-navOpen.addEventListener("mouseleave", () =>{
+navEl.addEventListener("mouseleave", () =>{
 	rev = setTimeout(tl.reverse(), 500);
 });
 
