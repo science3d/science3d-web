@@ -3,9 +3,12 @@ const navOpen = document.querySelector('.nav-open');
 
 //alert("It worksss!");
 //console.log("Hi!");
-//const tw = TweenLite.to(".cover",1,{width: "40%"});
+const tw = TweenLite.Fromto("nav",1,{opacity: 0, ease: Power2.easeOut});
 
-const tl = new TimelineLite({ paused: true, reversed: true });
+//const tl = new TimelineLite({ paused: true, reversed: true });
+
+const tl = new TimelineLite({ paused: true });
+
 
 tl.to(".cover",1, {
 	//left: "40%",

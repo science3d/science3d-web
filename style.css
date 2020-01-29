@@ -45,6 +45,7 @@ header{
 }
 
 nav{
+	border-radius: 15px 50px 30px;
 	background: white;
 	opacity:0.5;
 	z-index: 2;
