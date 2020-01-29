@@ -3,7 +3,7 @@ const navOpen = document.querySelector('.nav-open');
 
 //alert("It worksss!");
 //console.log("Hi!");
-const tw = TweenLite.FromTo(".nav-closed", 1, {opacity: 0, ease: Power2.easeOut});
+const tw = TweenLite.fromTo(".nav-closed", 1, {opacity: 0, ease: Power2.easeOut}, {opacity: 0.5});
 
 //const tl = new TimelineLite({ paused: true, reversed: true });
 
@@ -28,12 +28,12 @@ tl.to(".cover",1, {
 	0.5, 
 	{
 		opacity: 0,
-		x: 50,
+		x: 70,
 		ease: Power2.easeOut
 	},
 	{
 		opacity: 1,
-		x: 0,
+		x: 30,
 		onComplete: function(){
 			navOpen.style.pointerEvents = "auto";
 			console.log ("done");
@@ -41,9 +41,7 @@ tl.to(".cover",1, {
 	}
 );
 
-navButton.addEventListener("mouseenter", () =>{
-	pla = setTimeout(tl.play(), 50);
-});
+navButton.addEventListener("mouseenter", tl.play);
 
 
 navOpen.addEventListener("mouseleave", () =>{
