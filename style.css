@@ -45,6 +45,7 @@ header{
 }
 
 nav{
+	border-radius: 0px 50px 30px;	
 	background: white; 
 	opacity:0.5;
 	z-index: 2;
@@ -54,7 +55,6 @@ nav{
 }
 
 .nav-closed {
-	border-radius: 0px 50px 30px;	
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -64,7 +64,6 @@ nav{
 }
 
 .nav-open{
-	background: white;
 	position: absolute;
 	width: 40%;
 	height: 80%;
