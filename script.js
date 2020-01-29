@@ -38,11 +38,11 @@ tl.to(".cover",1, {
 	}
 );
 
-navButton.addEventListener("mouseenter", tween.play());
+navButton.addEventListener("mouseenter", tl.play());
 
-/*
+
 navOpen.addEventListener("mouseleave", () =>{
-	rev = setTimeout(tween.reverse(), 1000);
+	rev = setTimeout(tl.reverse(), 1000);
 });
 
 /*
