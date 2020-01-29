@@ -41,6 +41,7 @@ header{
 .nav-links{
 	justify-content: space-around;
 	display: flex;
+	width: 80%
 }
 
 nav{
@@ -75,7 +76,7 @@ nav{
 
 .nav-closed ul{
 	display: flex;
-	width: 50%
+	width: 80%
 	justify-content: space-around;
 	list-style: none;
 }

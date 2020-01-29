@@ -43,7 +43,7 @@ navButton.addEventListener("mouseenter", () =>{
 });
 
 navOpen.addEventListener("mouseleave",() =>{
-	tween.reverse();
+	rev = setTimeout(tween.reverse(), 1000);
 });
 
 /*
