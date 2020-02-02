@@ -55,11 +55,6 @@ nav{
 	color: #926457
 }
 
-.structur{
-	width: 250px;
-	height: 1px;
-}
-
 .nav-closed {
 	display: flex;
 	justify-content: space-around;
