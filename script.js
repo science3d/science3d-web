@@ -43,6 +43,7 @@ tl.to(".cover",1, {
 );
 
 navButton.addEventListener("mouseenter", () => {tl.play();});
+navButton.addEventListener("click", () => {tl.play();});
 
 
 navEl.addEventListener("mouseleave", () =>{
