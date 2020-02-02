@@ -19,6 +19,11 @@ header{
 	display: flex;
 }
 
+body {
+  background: url(./img/test-img.png);
+  background-size: cover;
+}
+
 .cover {
 	height: 100%;
 	position: absolute;
@@ -45,13 +50,13 @@ header{
 }
 
 nav{
-	border-radius: 0px 50px 30px;	
+	border-radius: 0px 30px 15px;	
 	background: white; 
 	opacity:0.7;
 	z-index: 2;
 	min-width: 350px;
 	width: 50%;
-	height: 20%;
+	height: 15%;
 	color: #926457
 }
 
@@ -59,7 +64,7 @@ nav{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 20%;
+	height: 15%;
 	width: 50%;
 	min-width: 350px;
 	position: absolute;
