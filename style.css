@@ -9,8 +9,8 @@ body{
 	height: 100%;
 	width: 100%;
 	font-family: "Abel", san-serif;
-	font-size: 5vw;
-	background: gray;
+	font-size: 2vw;
+	background: black;
 }
 
 header{
@@ -67,7 +67,7 @@ nav{
 }
 
 h2{
-	font-size: 10vw;
+	font-size: 5vw;
 }
 
 .nav-open{
@@ -98,7 +98,7 @@ h2{
 }
 
 .programming h2{
-	font-size: 8vw;
+	font-size: 3vw;
 }
 
 .programming ul{
