@@ -46,12 +46,12 @@ header{
 }
 
 nav{
-	border-radius: 0px 20px 10px;	
+	border-radius: 0px 3vw 2vw;	
 	background: white; 
 	opacity:0.7;
 	z-index: 2;
 	min-width: 150px;
-	width: 50%;
+	width: 60%;
 	height: 15%;
 	color: #926457
 }
@@ -61,18 +61,18 @@ nav{
 	justify-content: space-around;
 	align-items: center;
 	height: 15%;
-	width: 50%;
+	width: 60%;
 	min-width: 150px;
 	position: absolute;
 }
 
 h2{
-	font-size: 5vw;
+	font-size: 4vw;
 }
 
 .nav-open{
 	position: absolute;
-	width: 50%;
+	width: 60%;
 	min-width: 150px;
 	height: 80%;
 	top: 20%;
@@ -88,7 +88,7 @@ h2{
 	width: 70%
 	justify-content: space-around;
 	list-style: none;
-	font-size: 3vw;
+	font-size: 2.5vw;
 }
 
 .programming{
@@ -99,7 +99,7 @@ h2{
 }
 
 .programming h2{
-	font-size: 3vw;
+	font-size: 2.5vw;
 }
 
 .programming ul{
