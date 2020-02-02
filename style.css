@@ -66,12 +66,14 @@ nav{
 	align-items: center;
 	height: 20%;
 	width: 40%;
+	min-width: 250px;
 	position: absolute;
 }
 
 .nav-open{
 	position: absolute;
 	width: 40%;
+	min-width: 250px;
 	height: 80%;
 	top: 20%;
 	display: flex;
