@@ -9,7 +9,7 @@ body{
 	height: 100%;
 	width: 100%;
 	font-family: "Abel", san-serif;
-	font-size: 2vw;
+	font-size: 1.5vw;
 	background: black;
 }
 
@@ -46,7 +46,7 @@ header{
 }
 
 nav{
-	border-radius: 0px 3vw 2vw;	
+	border-radius: 0px 2vw 2vw;	
 	background: white; 
 	opacity:0.7;
 	z-index: 2;
@@ -67,7 +67,7 @@ nav{
 }
 
 h2{
-	font-size: 4vw;
+	font-size: 3vw;
 }
 
 .nav-open{
@@ -88,7 +88,7 @@ h2{
 	width: 70%
 	justify-content: space-around;
 	list-style: none;
-	font-size: 2.5vw;
+	font-size: 2vw;
 }
 
 .programming{
@@ -99,7 +99,7 @@ h2{
 }
 
 .programming h2{
-	font-size: 2.5vw;
+	font-size: 2vw;
 }
 
 .programming ul{
