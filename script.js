@@ -4,7 +4,7 @@ const navEl = document.getElementById("navv");
 
 //alert("It worksss!");
 //console.log("Hi!");
-const tw = TweenLite.fromTo(".nav-closed", 2, {opacity: 0, ease: Power2.easeOut}, {opacity: 0.7});
+const tw = TweenLite.fromTo("nav", 2, {opacity: 0, ease: Power2.easeOut}, {opacity: 0.7});
 
 //const tl = new TimelineLite({ paused: true, reversed: true });
 
