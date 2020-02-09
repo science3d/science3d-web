@@ -13,7 +13,7 @@ const tw = TweenLite.fromTo("nav", 3, {opacity: 0, ease: Power2.easeOut}, {opaci
 
 //const tl = new TimelineLite({ paused: true, reversed: true });
 
-const tl = new TimelineLite({ paused: true });
+const tl = new TimelineLite({ paused: true, reversed: true });
 const ab = new TimelineLite({ paused: true });
 const co = new TimelineLite({ paused: true });
 
@@ -21,10 +21,10 @@ tl.to(
 	"nav", 
 	1, 
 	{
-		height: "100%",
+		height: "70%",
 		ease: Power2.easeOut
 	},
-	"-=0.5"
+	"-=0.1"
 )
 .fromTo(
 	".nav-open", 
@@ -38,7 +38,7 @@ tl.to(
 		opacity: 1,
 		x: 0,
 		onComplete: function(){
-			navOpen.style.pointerEvents = "auto";
+//			navOpen.style.pointerEvents = "auto";
 		}
 	}
 );
@@ -63,9 +63,6 @@ ab.to(
 	{
 		opacity: 0.7,
 		y: 30,
-		onComplete: function(){
-			navOpen.style.pointerEvents = "auto"; 
-		}
 	}
 );
 
@@ -89,38 +86,36 @@ co.to(
 	{
 		opacity: 0.7,
 		y: 30,
-		onComplete: function(){
-			navOpen.style.pointerEvents = "auto"; 
-		}
 	}
 );
 
 
-navButton.addEventListener("mouseenter", () => {tl.play();});
-navButton.addEventListener("click", () => {tl.play();});
+//navButton.addEventListener("mouseenter", () => {toggleTween(tl);});
+navButton.addEventListener("click", () => {toggleTween(tl);});
+/*
 navEl.addEventListener("mouseleave", () =>{
-	rev = setTimeout(tl.reverse(), 500);
+	rev = setTimeout(oneWayToggle(tl), 500);
 });
+*/
+//aboutB.addEventListener("mouseenter", () => {toggleTween(ab);});
+aboutB.addEventListener("click", () => {toggleTween(ab);});
+//aboutB.addEventListener("mouseleave", () => {toggleTween(ab);});
 
-aboutB.addEventListener("mouseenter", () => {ab.play(); if(co.played()){co.reverse()};});
-aboutB.addEventListener("click", () => {ab.play();});
-aboutB.addEventListener("mouseleave", () => {ab.reverse();});
+contactsB.addEventListener("click", () => {toggleTween(co);});
+// setFocus("forma-name");
 
-contactsB.addEventListener("click", () => {co.reversed() ? co.play() : co.play();});
-setFocus("forma-name");
-
-aboutW.addEventListener("mouseleave", () =>{
-	revA = setTimeout(allAnimReset(), 100);});
-
+//aboutW.addEventListener("mouseleave", () =>{
+//	revA = setTimeout(allAnimReset(), 100);});
+/*
 function allAnimReset(){
-	if (tl.played()){tl.reverse()};
-	if (ab.played()){ab.reverse()};
-	if (co.played()){co.reverse()};
+	if (!tl.reversed()){tl.reverse()};
+	if (!ab.reversed()){ab.reverse()};
+	if (!co.reversed()){co.reverse()};
 	
 //	tl.reversed() ? void() : tl.reverse();
 //	ab.reversed() ? void() : ab.reverse();
 };
-
+*/
 function setFocus(elementToFocus) 
 	{ 
 		document.getElementById(elementToFocus).focus() 
@@ -135,10 +130,15 @@ navButton.addEventListener ("click", (e) =>{
 	}
 	toggleTween(tl);
 });
-
+*/
 function toggleTween (tween){
 	tween.reversed() ? tween.play() : tween.reverse();
-}
+};
+
+/*
+function oneWayToggle (tweenAn){
+	if(tweenAn.reversed()) {tweenAn.reverse();}
+};
 
 		<iframe class="iFrame" src="https://docs.google.com/forms/d/e/1FAIpQLSfIafL3AONbtcK8KmTUCaXg8IyFQSmJlUQC1BeLEp19h18_dw/viewform?embedded=true">Loading…</iframe>
 */
