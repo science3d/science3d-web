@@ -11,6 +11,7 @@ body{
 	font-family: "Abel", san-serif;
 	font-size: 1.5vw;
 	background: black;
+	overflow: hidden;
 }
 
 header{
@@ -42,7 +43,8 @@ header{
 .nav-links{
 	justify-content: space-around;
 	display: flex;
-	width: 70%
+	width: 70%;
+	cursor: pointer;
 }
 
 nav{
@@ -91,7 +93,7 @@ h2{
 	position: absolute;
 	width: 50%;
 	min-width: 200px;
-	height: 30%;
+	height: 0%;
 	top: 20%;
 	left: 25%;
 	display: flex;
@@ -124,7 +126,7 @@ h2{
 	min-width: 150px;
 	top: 20%;
 	left: 25%;
-	height: 20%;
+	height: 0%;
 	justify-content: space-around;
 	align-items: center;
 	/*	display: flex;
@@ -185,12 +187,16 @@ input[type=submit]:hover {
   background-color: #3683B9;
 }
 
-.forma{
+.txt-forma{
 	display: flex;
 	width: 70%
 	justify-content: space-around;
 	color: #2673B0;
 	text-align: justify;	
+}
+
+.forma{
+	opacity: 1;
 }
 
 .iFrame{
@@ -212,9 +218,11 @@ input[type=submit]:hover {
 
 .programming{
 	display: flex;
+	padding-top: 10px;
 	justify-content: space-around;
-	align-items: center;
+	align-items: left;
 	width: 100%;
+	color: #2673B0;	
 }
 
 .programming h2{
@@ -223,15 +231,17 @@ input[type=submit]:hover {
 
 .programming ul{
 	list-style: none;
+	align-items: left;
 }
 
 .programming ul li{
 	padding-bottom: 10px;
+	align-items: left;	
 }
 
 .programming ul li a{
 	text-decoration: none;
-	color: #926457
+	color: #2673B0;	
 }
 
 .nav-images{

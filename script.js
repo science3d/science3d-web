@@ -2,6 +2,8 @@ const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
 const aboutW = document.querySelector(".about");
 const contactW = document.querySelector(".contact");
+const covrI = document.querySelector(".cover");
+
 
 const navEl = document.getElementById("navv");
 const aboutB = document.getElementById("about-btn");
@@ -14,8 +16,20 @@ const tw = TweenLite.fromTo("nav", 3, {opacity: 0, ease: Power2.easeOut}, {opaci
 //const tl = new TimelineLite({ paused: true, reversed: true });
 
 const tl = new TimelineLite({ paused: true, reversed: true });
-const ab = new TimelineLite({ paused: true });
-const co = new TimelineLite({ paused: true });
+const ab = new TimelineLite({ paused: true, reversed: true });
+const co = new TimelineLite({ paused: true, reversed: true });
+const covr = new TimelineLite();
+
+covr.to(
+	".cover",
+	100,
+	{
+		scale: 1.5,
+		width: "100%",
+		height: "100%",
+		ease: Power2.easeOut
+	}
+);
 
 tl.to(
 	"nav", 
@@ -64,6 +78,17 @@ ab.to(
 		opacity: 0.7,
 		y: 30,
 	}
+)
+.fromTo(
+	".forma", 
+	0.5, 
+	{
+		opacity: 1,
+		ease: Power2.easeOut
+	},
+	{
+		opacity: 0,
+	}
 );
 
 co.to(
@@ -104,6 +129,8 @@ aboutB.addEventListener("click", () => {toggleTween(ab);});
 contactsB.addEventListener("click", () => {toggleTween(co);});
 // setFocus("forma-name");
 
+covrI.addEventListener("mousemove", () => {covr.reversed() ? covr.play() : covr.reverse();});
+covrI.addEventListener("click", () => {toggleTween(covr);});
 //aboutW.addEventListener("mouseleave", () =>{
 //	revA = setTimeout(allAnimReset(), 100);});
 /*
