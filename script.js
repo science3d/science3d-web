@@ -132,6 +132,19 @@ navButton.addEventListener ("click", (e) =>{
 });
 */
 function toggleTween (tween){
+	if (tween == tl) {
+		if (!ab.reversed()) {ab.reverse()};
+		if (!co.reversed()) {co.reverse()};	
+	};
+	if (tween == ab) {
+		if (!tl.reversed()) {tl.reverse()};
+		if (!co.reversed()) {co.reverse()};	
+	};
+	if (tween == co) {
+		if (!ab.reversed()) {ab.reverse()};
+		if (!tl.reversed()) {tl.reverse()};	
+	};
+
 	tween.reversed() ? tween.play() : tween.reverse();
 };
 
