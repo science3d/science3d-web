@@ -1,12 +1,14 @@
 const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
 const aboutW = document.querySelector(".about");
+const about_meW = document.querySelector(".about-me");
 const contactW = document.querySelector(".contact");
 const covrI = document.querySelector(".cover");
 
 
 const navEl = document.getElementById("navv");
 const aboutB = document.getElementById("about-btn");
+const aboutmeB = document.getElementById("about-me-btn");
 const contactsB = document.getElementById("contacts-btn");
 
 //alert("It worksss!");
@@ -17,6 +19,7 @@ const tw = TweenLite.fromTo("nav", 3, {opacity: 0, ease: Power2.easeOut}, {opaci
 
 const tl = new TimelineLite({ paused: true, reversed: true });
 const ab = new TimelineLite({ paused: true, reversed: true });
+const ab_me = new TimelineLite({ paused: true, reversed: true });
 const co = new TimelineLite({ paused: true, reversed: true });
 const covr = new TimelineLite();
 
@@ -91,6 +94,41 @@ ab.to(
 	}
 );
 
+ab_me.to(
+	".about-me", 
+	1, 
+	{
+		height: "70%",
+		ease: Power2.easeOut
+	},
+	"-=0.5"
+)
+.fromTo(
+	".about-me", 
+	0.5, 
+	{
+		opacity: 0,
+		y: 10,
+		ease: Power2.easeOut
+	},
+	{
+		opacity: 0.7,
+		y: 30,
+	}
+)
+.fromTo(
+	".forma", 
+	0.5, 
+	{
+		opacity: 1,
+		ease: Power2.easeOut
+	},
+	{
+		opacity: 0,
+	}
+);
+
+
 co.to(
 	".contact", 
 	1, 
@@ -127,6 +165,7 @@ aboutB.addEventListener("click", () => {toggleTween(ab);});
 //aboutB.addEventListener("mouseleave", () => {toggleTween(ab);});
 
 contactsB.addEventListener("click", () => {toggleTween(co);});
+aboutmeB.addEventListener("click", () => {toggleTween(ab_me);});
 // setFocus("forma-name");
 
 covrI.addEventListener("mousemove", () => {covr.reversed() ? covr.play() : covr.reverse();});
@@ -161,17 +200,24 @@ navButton.addEventListener ("click", (e) =>{
 function toggleTween (tween){
 	if (tween == tl) {
 		if (!ab.reversed()) {ab.reverse()};
-		if (!co.reversed()) {co.reverse()};	
+		if (!co.reversed()) {co.reverse()};
+		if (!ab_me.reversed()) {ab_me.reverse()};			
 	};
 	if (tween == ab) {
 		if (!tl.reversed()) {tl.reverse()};
 		if (!co.reversed()) {co.reverse()};	
+		if (!ab_me.reversed()) {ab_me.reverse()};			
 	};
 	if (tween == co) {
 		if (!ab.reversed()) {ab.reverse()};
 		if (!tl.reversed()) {tl.reverse()};	
+		if (!ab_me.reversed()) {ab_me.reverse()};			
 	};
-
+	if (tween == ab_me) {
+		if (!ab.reversed()) {ab.reverse()};
+		if (!tl.reversed()) {tl.reverse()};	
+		if (!co.reversed()) {co.reverse()};			
+	};
 	tween.reversed() ? tween.play() : tween.reverse();
 };
 
