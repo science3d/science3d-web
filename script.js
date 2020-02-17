@@ -133,7 +133,7 @@ co.to(
 	".contact", 
 	1, 
 	{
-		height: "60%",
+		height: "55%",
 		ease: Power2.easeOut
 	},
 	"-=0.5"
