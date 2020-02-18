@@ -120,12 +120,12 @@
 	xhttp.onreadystatechange = function() {
     	//if (this.readyState == 4 && this.status == 200) {
  			var patents_data = xhttp.responseText;
- 			document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data,template);		
+ 			document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data.patents,template);		
     	//}
 	};
 	xhttp.open("GET", "https://raw.githubusercontent.com/science3d/science3d-web/gh-pages/patents.json", true);
 	xhttp.send();
-	console.log(patents_data);       
+	console.log(patents_data.patents);       
     
 //    let data = [];    
 
