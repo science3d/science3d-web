@@ -79,13 +79,12 @@
 					<div>
 						<p align="center">Hello everyone! Welcome to my hobby Web-page!</p><br>
 						<p align="center">My name is Maxim. Nice to meet you!</p><br>
-						<p class="about-p">Breifly about myself: in addition to Medical Doctors' degree and PhD in Medical Science I possess Engineers' Degree in Information&Measurement Technologies.</p>
-						<p class="about-p">I've been occupied with programming since early childhood. I love web-programming (I used to build my own CMS with PHP, developed some small games in WebGL etc.), mobile development and computer graphics.</p>
+						<p class="about-p">Breifly about myself: in addition to Medical Doctors' degree and PhD in Medical Science I possess Engineers' Degree in Information&Measurement Technologies. I'm author of 17 Russian Federation Patents and more than 100 scientific papers.</p>
+						<p class="about-p">I've been also occupied with programming as hobby since early childhood. I love web-programming (I used to build my own CMS with PHP, developed some small games in WebGL etc.), mobile development and computer graphics.</p>
 						<p class="about-p">Nowadays, I'm focused mainly on Javascript, Unity3D and iOS development. However, as University Professor I supervise students' research on various subjects from audio/visual analysis in C++ (OpenCV) to hardware programming (Arduino, Raspberry etc.). As part of my daily routine I've been using Engineering software such as LabView, MathCad, MathLab etc.</p>
-						<p class="about-p">I really love visualisations and computer graphics and utilize it a lot for my scientific projects and research papers. I used to create with Xara and 3DSMax, but since recently I moved for Blender 2.8. It is really powerfull and fully compatible with Unity3D!</p>
+						<p class="about-p">I really love visualisations and computer graphics and utilize them a lot for my scientific projects and research papers. I used to create with Xara and 3DSMax, but since recently I moved to Blender 2.8. It is really powerfull and fully compatible with Unity3D!</p>
 						<p align="center">I would really appreciate any collaboration and joint activities! <br> Do not hesitate to <a href="#" class="nav-button">write me!</a></p>
 					</div>
-					<div id="table_for_json"></div>				
 		</div>
 		
 		<div class="contact">
@@ -127,9 +126,14 @@
 	xhttp.open("GET", "https://raw.githubusercontent.com/science3d/science3d-web/gh-pages/patents.json", true);
 	xhttp.send();
 	      
-    
-//    let data = [];    
+function pre_loader(){
+	document.querySelectorAll(".about, .about-me, .nav-open").forEach(el => el.style.display = 'flex');	
+	document.querySelectorAll(".contact").forEach(el => el.style.display = 'inline-block');	
 
+};
+
+//    let data = [];    
+window.onload = pre_loader();
 </script>
 
 

@@ -5,7 +5,6 @@ const about_meW = document.querySelector(".about-me");
 const contactW = document.querySelector(".contact");
 const covrI = document.querySelector(".cover");
 
-
 const navEl = document.getElementById("navv");
 const aboutB = document.getElementById("about-btn");
 const aboutmeB = document.getElementById("about-me-btn");
