@@ -120,6 +120,7 @@
 	xhttp.onreadystatechange = function() {
     	if (this.readyState == 4 && this.status == 200) {
  			var patents_data = xhttp.responseText;
+ 	document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data,template);		
     	}
 	};
 	xhttp.open("GET", "./patents.json", true);
@@ -127,7 +128,7 @@
 	console.log(patents_data);       
     
 //    let data = [];    
-document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data,template);
+
 </script>
 
 
