@@ -1,0 +1,21 @@
+{
+	"patents":[
+        {
+        "title":"Patent1",
+    	"year":"2005"
+    	},
+        {
+        "title":"Patent2",
+    	"year":"2006"
+    	},
+        {"title":"Patent3",
+        "year":"2009"
+    	},
+        {"title":"Patent4",
+        "year":"2010"
+    	},
+        {"title":"Patent5",
+        "year":"2012"
+    	}
+	]
+}

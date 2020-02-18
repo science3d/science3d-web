@@ -78,7 +78,8 @@
 				</h2>
 					<div>
 						<p align="center">Hello everyone! Welcome to my hobby Web-page!</p><br>
-						<p class="about-p">In addition to Medical Doctors' degree and PhD in Medical Science I possess Engineers' Degree in Information&Measurement Technologies.</p>
+						<p align="center">My name is Maxim. Nice to meet you!</p><br>
+						<p class="about-p">Breifly about myself: in addition to Medical Doctors' degree and PhD in Medical Science I possess Engineers' Degree in Information&Measurement Technologies.</p>
 						<p class="about-p">I've been occupied with programming since early childhood. I love web-programming (I used to build my own CMS with PHP, developed some small games in WebGL etc.), mobile development and computer graphics.</p>
 						<p class="about-p">Nowadays, I'm focused mainly on Javascript, Unity3D and iOS development. However, as University Professor I supervise students' research on various subjects from audio/visual analysis in C++ (OpenCV) to hardware programming (Arduino, Raspberry etc.). As part of my daily routine I've been using Engineering software such as LabView, MathCad, MathLab etc.</p>
 						<p class="about-p">I really love visualisations and computer graphics and utilize it a lot for my scientific projects and research papers. I used to create with Xara and 3DSMax, but since recently I moved for Blender 2.8. It is really powerfull and fully compatible with Unity3D!</p>
@@ -114,15 +115,18 @@
  
 <script>
     let template = {'<>':'div','html':'${title} ${year}'};
-        
-    let data = [
-        {"title":"Patent1","year":"2005"},
-        {"title":"Patent2","year":"2006"},
-        {"title":"Patent3","year":"2009"},
-        {"title":"Patent4","year":"2010"},
-        {"title":"Patent5","year":"2012"}
-    ];
-//        document.getElementById("table_for_json").innerHTML = json2html.transform(data,template);
+
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+ 			var patents_data = xhttp.responseText;
+    	}
+	};
+	xhttp.open("GET", "patents.json", true);
+	xhttp.send();       
+    
+//    let data = [];    
+document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data,template);
 </script>
 
 
