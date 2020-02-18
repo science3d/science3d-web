@@ -123,7 +123,8 @@
     	}
 	};
 	xhttp.open("GET", "./patents.json", true);
-	xhttp.send();       
+	xhttp.send();
+	console.log(patents_data);       
     
 //    let data = [];    
 document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data,template);
