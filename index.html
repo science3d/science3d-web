@@ -119,7 +119,7 @@
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
     	//if (this.readyState == 4 && this.status == 200) {
- 			var patents_data = xhttp.responseText;
+ 			var patents_data = JSON.parse(xhttp.responseText);
  			document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data.patents,template);
  			console.log(patents_data.patents); 		
     	//}
