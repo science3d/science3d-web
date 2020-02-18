@@ -123,7 +123,7 @@
  	document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data,template);		
     	}
 	};
-	xhttp.open("GET", "./patents.json", true);
+	xhttp.open("GET", "https://raw.githubusercontent.com/science3d/science3d-web/gh-pages/patents.json", true);
 	xhttp.send();
 	console.log(patents_data);       
     
