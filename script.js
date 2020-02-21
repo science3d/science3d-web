@@ -1,5 +1,6 @@
 const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
+const container = document.querySelector('.container');
 const aboutW = document.querySelector(".about");
 const about_meW = document.querySelector(".about-me");
 const contactW = document.querySelector(".contact");
@@ -20,6 +21,7 @@ const tl = new TimelineLite({ paused: true, reversed: true });
 const ab = new TimelineLite({ paused: true, reversed: true });
 const ab_me = new TimelineLite({ paused: true, reversed: true });
 const co = new TimelineLite({ paused: true, reversed: true });
+const contain = new TimelineLite({ paused: true, reversed: true });
 const covr = new TimelineLite();
 
 covr.to(
@@ -44,6 +46,23 @@ tl.to(
 )
 .fromTo(
 	".nav-open", 
+	0.5, 
+	{
+		opacity: 0,
+		x: 50,
+		ease: Power2.easeOut
+	},
+	{
+		opacity: 1,
+		x: 0,
+		onComplete: function(){
+			navOpen.style.pointerEvents = "auto";
+		}
+	}
+);
+
+contain.fromTo(
+	".container", 
 	0.5, 
 	{
 		opacity: 0,
@@ -133,7 +152,7 @@ co.to(
 	1, 
 	{
 		height: "55%",
-		ease: Power2.easeOut
+		ease: Power2.easeOut,
 	},
 	"-=0.5"
 )
@@ -143,11 +162,15 @@ co.to(
 	{
 		opacity: 0,
 		y: 10,
-		ease: Power2.easeOut
+		ease: Power2.easeOut,
+		onComplete: togglePointer,
+		onReverseComplete: togglePointer
 	},
 	{
 		opacity: 0.7,
 		y: 30,
+		onComplete: togglePointer,
+		onReverseComplete: togglePointer
 	}
 );
 
@@ -181,6 +204,11 @@ function allAnimReset(){
 //	ab.reversed() ? void() : ab.reverse();
 };
 */
+function togglePointer(){
+	if (contactW.style.opacity < 0.6) {contactW.style.pointerEvents = "none"; alert("none")} else
+		{contactW.style.pointerEvents = "auto"; alert("auto")};
+};
+
 function setFocus(elementToFocus) 
 	{ 
 		document.getElementById(elementToFocus).focus() 
