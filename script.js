@@ -56,7 +56,7 @@ tl.to(
 		opacity: 1,
 		x: 0,
 		onComplete: function(){
-			navOpen.style.pointerEvents = "auto";
+//			navOpen.style.pointerEvents = "auto";
 		}
 	}
 );
@@ -205,8 +205,8 @@ function allAnimReset(){
 };
 */
 function togglePointer(){
-	if (contactW.style.opacity < 0.6) {contactW.style.pointerEvents = "none"; alert("none")} else
-		{contactW.style.pointerEvents = "auto"; alert("auto")};
+	if (contactW.style.opacity < 0.6) {contactW.style.pointerEvents = "none"; } else
+		{contactW.style.pointerEvents = "auto";};
 };
 
 function setFocus(elementToFocus) 
