@@ -179,7 +179,7 @@ co.to(
 
 $(".nav-button").each(function(index, element){
   var nb = new TimelineLite({})
-  nb.to(this, 0.3, {scale:1.5, ease: "elastic.out(1, 0.3)"})
+  nb.to(this, 0.3, {scale:1.5, ease: Back.easeOut.config(2)})
   nb.reverse();
   this.animation = nb;
 })
