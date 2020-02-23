@@ -115,16 +115,16 @@ h2{
 	opacity: 0.7;
 	position: absolute;
 	width: 50%;
-	min-width: 200px;
+	min-width: 150px;
 	height: 0%;
-	top: 20%;
+	top: 15vh;
 	left: 25%;
 	display: none;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	pointer-events: none;
-	font-size: 2vh;
+	font-size: 2.4vmin;
 	color: white;
 	box-shadow: inset 0 0 0.2rem 0 rgba(0, 0, 0, .7);
 	backdrop-filter: blur(5px);
@@ -136,17 +136,17 @@ h2{
 	border-radius: 2vw 2vw;	
 	opacity: 0.7;
 	position: absolute;
-	width: 50%;
-	min-width: 220px;
+	width: 50vw;
+	min-width: 150px;
 	height: 0%;
-	top: 20%;
-	left: 25%;
+	top: 15vh;
+	left: 25vw;
 	display: none;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	pointer-events: none;
-	font-size: 1.7vh;
+	font-size: 2.2vmin;
 	box-shadow: inset 0 0 0.2rem 0 rgba(0, 0, 0, .7);
 	backdrop-filter: blur(5px);
 	color: white;
@@ -161,6 +161,7 @@ h2{
 	padding-right: 10px;
 	color: white;
 	text-align: justify;
+	line-height: 2.3vh;
 }
 
 .contact{

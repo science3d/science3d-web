@@ -84,7 +84,7 @@ ab.to(
 	".about", 
 	1, 
 	{
-		height: "70%",
+		height: "60%",
 		ease: Power2.easeOut
 	},
 	"-=0.5"
@@ -118,7 +118,7 @@ ab_me.to(
 	".about-me", 
 	1, 
 	{
-		height: "70%",
+		height: "75vh",
 		ease: Power2.easeOut
 	},
 	"-=0.5"
