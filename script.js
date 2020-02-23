@@ -1,4 +1,3 @@
-const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
 const container = document.querySelector('.container');
 const aboutW = document.querySelector(".about");
@@ -6,6 +5,7 @@ const about_meW = document.querySelector(".about-me");
 const contactW = document.querySelector(".contact");
 const covrI = document.querySelector(".cover");
 
+const navButton = document.getElementById('portfolio');
 const navEl = document.getElementById("navv");
 const aboutB = document.getElementById("about-btn");
 const aboutmeB = document.getElementById("about-me-btn");
@@ -23,6 +23,8 @@ const ab_me = new TimelineLite({ paused: true, reversed: true });
 const co = new TimelineLite({ paused: true, reversed: true });
 const contain = new TimelineLite({ paused: true, reversed: true });
 const covr = new TimelineLite();
+
+var navButtonAnimation;
 
 covr.to(
 	".cover",
@@ -56,7 +58,7 @@ tl.to(
 		opacity: 1,
 		x: 0,
 		onComplete: function(){
-//			navOpen.style.pointerEvents = "auto";
+			navOpen.style.pointerEvents = "auto";
 		}
 	}
 );
@@ -174,6 +176,25 @@ co.to(
 	}
 );
 
+
+$(".nav-button").each(function(index, element){
+  var nb = new TimelineLite({})
+  nb.to(this, 0.3, {scale:1.5, ease: "elastic.out(1, 0.3)"})
+  nb.reverse();
+  this.animation = nb;
+})
+
+$(".nav-button").hover(function(){
+  if(navButtonAnimation){
+    this.animation.reversed(!this.animation.reversed());
+    if(navButtonAnimation != this.animation && navButtonAnimation.reversed() == false){
+      navButtonAnimation.reversed(!navButtonAnimation.reversed());
+    }
+  } else {
+    this.animation.reversed(!this.animation.reversed())
+  }
+  navButtonAnimation = this.animation;  
+})
 
 //navButton.addEventListener("mouseenter", () => {toggleTween(tl);});
 navButton.addEventListener("click", () => {toggleTween(tl);});
