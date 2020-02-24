@@ -31,41 +31,44 @@
 				</ul>
 			</div>
 			<div class="nav-open">
-				<div class="programming">
-				<div class="menu"><h2>Science</h2></div>
-				<div class="menu">
-				<ul>
-					<li id="patents" class="nav-button" href="#">Patents</li>
-					<li class="nav-button">Papers</li>
-					<li class="nav-button">Projects</li>
-				</ul>
+				<div class="navigation">
+					<div class="programming">
+						<div class="menu"><h2>Science</h2></div>
+						<div class="menu">
+							<ul>
+								<li id="patents" class="nav-button" href="#">Patents</li>
+								<li class="nav-button">Papers</li>
+								<li class="nav-button">Projects</li>
+							</ul>
+						</div>
+					</div>
+					<div class="programming">
+						<div style="width: 20%"><h2>Programming</h2></div>
+						<div style="width: 20%">
+							<ul>
+								<li class="nav-button">JSON + Google API</li>
+								<li class="nav-button">Unity3D</li>
+								<li class="nav-button">OpenCV</li>
+							</ul>
+						</div>
+					</div>
+					<div class="programming">
+						<div style="width: 20%"><h2>Graphics</h2></div>
+						<div style="width: 20%">
+							<ul>
+								<li class="nav-button">Vector</li>
+								<li class="nav-button">3D Graphics</li>
+								<li class="nav-button">Industrial</li>
+							</ul>
+						</div>
+					</div>
 				</div>
+				<div class="container">
+					<div class="table_for_json">	My patents:		</div>
+					<div id="containerGoBack" class="nav-button">Back</div>
 				</div>
-				<div class="programming">
-				<div style="width: 20%"><h2>Programming</h2></div>
-				<div style="width: 20%">
-				<ul>
-					<li class="nav-button">JSON + Google API</li>
-					<li class="nav-button">Unity3D</li>
-					<li class="nav-button">OpenCV</li>
-				</ul>
-				</div>
-				</div>
-				<div class="programming">
-				<div style="width: 20%"><h2>Graphics</h2></div>
-				<div style="width: 20%">
-				<ul>
-					<li class="nav-button">Vector</li>
-					<li class="nav-button">3D Graphics</li>
-					<li class="nav-button">Industrial</li>
-				</ul>
-				</div>
-				</div>
-			</div>
-			<div class="container">
-				<div class="table_for_json">				
-				</div>
-			</div>
+			</div>	
+
 		</nav>
 	</header>
 		<main>	
@@ -118,7 +121,7 @@
 	<script type="text/javascript" src="./script.js"></script>
 
 <script>
-    let template = {'<>':'div','html':'${title} ${year}'};
+    let template = {'<>':'div','html':'${title} ${number} ${year}'};
 
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -132,7 +135,7 @@
 	xhttp.send();
 	      
 function pre_loader(){
-	document.querySelectorAll(".about, .about-me, .nav-open").forEach(el => el.style.display = 'flex');	
+	document.querySelectorAll(".about, .about-me, .nav-open, .container").forEach(el => el.style.display = 'flex');	
 	document.querySelectorAll(".contact").forEach(el => el.style.display = 'inline-block');	
 
 };

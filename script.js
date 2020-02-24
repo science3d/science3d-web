@@ -4,24 +4,25 @@ const aboutW = document.querySelector(".about");
 const about_meW = document.querySelector(".about-me");
 const contactW = document.querySelector(".contact");
 const covrI = document.querySelector(".cover");
+const containW = document.querySelector(".container");
+const navigationW = document.querySelector(".navigation");
 
 const navButton = document.getElementById('portfolio');
 const navEl = document.getElementById("navv");
 const aboutB = document.getElementById("about-btn");
 const aboutmeB = document.getElementById("about-me-btn");
 const contactsB = document.getElementById("contacts-btn");
+const patentsB = document.getElementById("patents");
+const backB = document.getElementById("containerGoBack");
 
-//alert("It worksss!");
-//console.log("Hi!");
+
 const tw = TweenLite.fromTo("nav", 3, {opacity: 0, ease: Power2.easeOut}, {opacity: 0.7});
-
-//const tl = new TimelineLite({ paused: true, reversed: true });
 
 const tl = new TimelineLite({ paused: true, reversed: true });
 const ab = new TimelineLite({ paused: true, reversed: true });
 const ab_me = new TimelineLite({ paused: true, reversed: true });
 const co = new TimelineLite({ paused: true, reversed: true });
-const contain = new TimelineLite({ paused: true, reversed: true });
+const contain = new TimelineLite({ paused: true });
 const covr = new TimelineLite();
 
 var navButtonAnimation;
@@ -69,15 +70,35 @@ contain.fromTo(
 	{
 		opacity: 0,
 		x: 50,
-		ease: Power2.easeOut
+		ease: Power2.easeOut,
+
 	},
 	{
 		opacity: 1,
 		x: 0,
 		onComplete: function(){
-//			navOpen.style.pointerEvents = "auto";
+			containW.style.pointerEvents = "auto";
 		}
 	}
+)
+.to(
+	"nav",
+	0.5,
+	{
+		height: "90%",
+		ease: Power2.easeOut
+	},
+	"-=0.5"	
+	)
+.to(
+	".navigation", 
+	0.5, 
+	{
+		opacity: 0,
+		x: 50,
+		ease: Power2.easeOut
+	},
+	"-=1"
 );
 
 ab.to(
@@ -213,6 +234,12 @@ aboutmeB.addEventListener("click", () => {toggleTween(ab_me);});
 
 covrI.addEventListener("mousemove", () => {covr.reversed() ? covr.play() : covr.reverse();});
 covrI.addEventListener("click", () => {toggleTween(covr);});
+patentsB.addEventListener("click", () => {contain.play();});
+backB.addEventListener("click", () => {
+	contain.reverse();
+	navigationW.style.pointerEvents = "auto";
+	containW.style.pointerEvents = "none";
+});
 //aboutW.addEventListener("mouseleave", () =>{
 //	revA = setTimeout(allAnimReset(), 100);});
 /*
