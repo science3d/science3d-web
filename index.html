@@ -119,7 +119,14 @@
 	</main>
 	
 	<script type="text/javascript" src="./script.js"></script>
+<script>	      
+function pre_loader(){
+	document.querySelectorAll(".about, .about-me, .nav-open, .container").forEach(el => el.style.display = 'flex');	
+	document.querySelectorAll(".contact").forEach(el => el.style.display = 'inline-block');	
 
+};   
+window.onload = pre_loader();
+</script>
 <script>
     let template = {'<>':'div','html':'${title} ${year}'};
 
@@ -131,16 +138,9 @@
  			console.log(patents_data.patents); 		
     	}
 	};
-	xhttp.open("GET", "https://raw.githubusercontent.com/science3d/science3d-web/gh-pages/patents.json", true);
-	xhttp.send();
+	window.onload = xhttp.open("GET", "https://raw.githubusercontent.com/science3d/science3d-web/gh-pages/patents.json", true);
+	window.onload = xhttp.send();
 </script>
-<script>	      
-function pre_loader(){
-	document.querySelectorAll(".about, .about-me, .nav-open, .container").forEach(el => el.style.display = 'flex');	
-	document.querySelectorAll(".contact").forEach(el => el.style.display = 'inline-block');	
 
-};   
-window.onload = pre_loader();
-</script>
 </body>
 </html>
