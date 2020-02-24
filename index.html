@@ -43,8 +43,8 @@
 						</div>
 					</div>
 					<div class="programming">
-						<div style="width: 20%"><h2>Programming</h2></div>
-						<div style="width: 20%">
+						<div style="width: 25%"><h2>Programming</h2></div>
+						<div style="width: 25%">
 							<ul>
 								<li class="nav-button">JSON + Google API</li>
 								<li class="nav-button">Unity3D</li>
@@ -53,8 +53,8 @@
 						</div>
 					</div>
 					<div class="programming">
-						<div style="width: 20%"><h2>Graphics</h2></div>
-						<div style="width: 20%">
+						<div style="width: 25%"><h2>Graphics</h2></div>
+						<div style="width: 25%">
 							<ul>
 								<li class="nav-button">Vector</li>
 								<li class="nav-button">3D Graphics</li>
@@ -67,10 +67,10 @@
 						<table id="table_for_json" class="table-patents">
 							<thead>
 								<tr>
-									<th>#</th>
-									<th>Title</th>
-									<th>Number</th>
-									<th>Date</th>
+									<th class="my-td">#</th>
+									<th class="my-td">Title</th>
+									<th class="my-td">Number</th>
+									<th class="my-td">Date</th>
 								</tr>
 							</thead>
 							<tbody></tbody>
@@ -141,16 +141,20 @@ window.onload = pre_loader();
     let template  = {
     tag: 'tr',
     children: [{
-        "tag": "td",
-            "html": "${order}"
+        'tag': 'td',
+        'class': 'my-td',
+            'html': '${order}'
     }, {
         "tag": "td",
+        'class': 'my-td',
             "html": "${title}"
     }, {
         "tag": "td",
+        'class': 'my-td',
             "html": "${number}"
     }, {
         "tag": "td",
+        'class': 'my-td',
             "html": "${year}"
     }]
 };
@@ -160,7 +164,7 @@ window.onload = pre_loader();
     	if (this.readyState == 4 && this.status == 200) {
  			let patents_data = JSON.parse(xhttp.responseText);
  			//$("#table_for_json > tbody").json2html(patents_data.patents, template);
- 			document.getElementById("table_for_json").getElementsByTagName('tbody').innerHTML = json2html.transform(patents_data.patents,template);
+ 			document.getElementById("table_for_json").getElementsByTagName("tbody")[0].innerHTML = json2html.transform(patents_data.patents,template);
  			console.log(patents_data.patents); 		
     	}
 	};

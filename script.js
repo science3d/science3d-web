@@ -22,7 +22,7 @@ const tl = new TimelineLite({ paused: true, reversed: true });
 const ab = new TimelineLite({ paused: true, reversed: true });
 const ab_me = new TimelineLite({ paused: true, reversed: true });
 const co = new TimelineLite({ paused: true, reversed: true });
-const contain = new TimelineLite({ paused: true });
+const contain = new TimelineLite({ paused: true, reversed: true });
 const covr = new TimelineLite();
 
 var navButtonAnimation;
@@ -42,8 +42,13 @@ tl.to(
 	"nav", 
 	1, 
 	{
-		height: "70%",
-		ease: Power2.easeOut
+		height: "60%",
+		ease: Power2.easeOut,
+		onComplete: function(){
+			if (!contain.reversed()) {
+			const addNav = TweenLite.to("nav", 0.1, {height: "90%", ease: Power2.easeOut});
+			}
+		}
 	},
 	"-=0.1"
 )
@@ -64,7 +69,25 @@ tl.to(
 	}
 );
 
-contain.fromTo(
+contain.to(
+	"nav",
+	0.5,
+	{
+		height: "90%",
+		ease: Power2.easeOut
+	},
+	"-=0.5"	
+)
+.to(
+	".navigation", 
+	0.5, 
+	{
+		opacity: 0,
+		x: 50,
+		ease: Power2.easeOut
+	},
+)
+.fromTo(
 	".container", 
 	0.5, 
 	{
@@ -79,26 +102,7 @@ contain.fromTo(
 		onComplete: function(){
 			containW.style.pointerEvents = "auto";
 		}
-	}
-)
-.to(
-	"nav",
-	0.5,
-	{
-		height: "90%",
-		ease: Power2.easeOut
 	},
-	"-=0.5"	
-	)
-.to(
-	".navigation", 
-	0.5, 
-	{
-		opacity: 0,
-		x: 50,
-		ease: Power2.easeOut
-	},
-	"-=1"
 );
 
 ab.to(
@@ -294,6 +298,14 @@ function toggleTween (tween){
 		if (!co.reversed()) {co.reverse()};			
 	};
 	tween.reversed() ? tween.play() : tween.reverse();
+
+/*
+	if (!contain.reversed()) {
+		contain.reverse();
+		navigationW.style.pointerEvents = "auto";
+		containW.style.pointerEvents = "none";
+		};
+		*/
 };
 
 /*
