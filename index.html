@@ -64,7 +64,17 @@
 					</div>
 				</div>
 				<div class="container">
-					<div class="table_for_json">	My patents:		</div>
+						<table id="table_for_json" class="table-patents">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Title</th>
+									<th>Number</th>
+									<th>Date</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
 					<div id="containerGoBack" class="nav-button">Back</div>
 				</div>
 			</div>	
@@ -128,18 +138,34 @@ function pre_loader(){
 window.onload = pre_loader();
 </script>
 <script>
-    let template = {'<>':'div','html':'${title} ${year}'};
+    let template  = {
+    tag: 'tr',
+    children: [{
+        "tag": "td",
+            "html": "${order}"
+    }, {
+        "tag": "td",
+            "html": "${title}"
+    }, {
+        "tag": "td",
+            "html": "${number}"
+    }, {
+        "tag": "td",
+            "html": "${year}"
+    }]
+};
 
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
     	if (this.readyState == 4 && this.status == 200) {
  			let patents_data = JSON.parse(xhttp.responseText);
- 			document.getElementById("table_for_json").innerHTML = json2html.transform(patents_data.patents,template);
+ 			//$("#table_for_json > tbody").json2html(patents_data.patents, template);
+ 			document.getElementById("table_for_json").getElementsByTagName('tbody').innerHTML = json2html.transform(patents_data.patents,template);
  			console.log(patents_data.patents); 		
     	}
 	};
-	window.onload = xhttp.open("GET", "https://raw.githubusercontent.com/science3d/science3d-web/gh-pages/patents.json", true);
-	window.onload = xhttp.send();
+	xhttp.open("GET", "https://raw.githubusercontent.com/science3d/science3d-web/gh-pages/patents.json", true);
+	xhttp.send();
 </script>
 
 </body>

@@ -1,73 +1,105 @@
 {
 	"patents":[
         {
+        "order":"1",	
         "title":"Method and substance for sensorineural hearing loss treatment",
         "number":"2698451",
     	"year":"27/08/2019"
     	},
         {
+        "order":"2",
         "title":"Pharmaceutical substance effective against stroke",
         "number":"2675601",
     	"year":"20/12/2018"
     	},
-        {"title":"Method and medication for treatment of otitis media with effusion",
+        {
+        "order":"3",
+        "title":"Method and medication for treatment of otitis media with effusion",
         "number":"2550966",	
         "year":"20/05/2015"
     	},
-        {"title":"Method of diagnosis of otitis media with effusion",
+        {
+		"order":"4",
+        "title":"Method of diagnosis of otitis media with effusion",
         "number":"2487667",
         "year":"20/07/2013"
     	},
-        {"title":"Method of hearing evaluation",
+        {        
+        "order":"5",
+		"title":"Method of hearing evaluation",
         "number":"2487665",
         "year":"20/07/2013"
     	},
-    	{"title":"Method of treatment of otitis media with effusion",
+    	{
+		"order":"6",
+		"title":"Method of treatment of otitis media with effusion",
         "number":"2424821",
         "year":"27/07/2011"
     	},
 
-    	{"title":"Method of determination of optimal parameters for hearing aid fitting",
+    	{
+		"order":"7",
+		"title":"Method of determination of optimal parameters for hearing aid fitting",
         "number":"2414168",
         "year":"20/03/2011"
     	},
-    	{"title":"Device for drainage and therapeutic aeration of middle ear",
+    	{
+		"order":"8",
+		"title":"Device for drainage and therapeutic aeration of middle ear",
         "number":"90333",
         "year":"10/01/2010"
     	},
-    	{"title":"Tool for resection of uncinate process of ethmoid bone",
+    	{
+		"order":"9",
+		"title":"Tool for resection of uncinate process of ethmoid bone",
         "number":"99315",
         "year":"20/11/2010"
     	},
-    	{"title":"Method of therapeutic insufflation of Eustachian tube",
+    	{
+		"order":"10",
+		"title":"Method of therapeutic insufflation of Eustachian tube",
         "number":"2401666",
         "year":"20/10/2010"
     	},
-    	{"title":"Tool for retrograde filling of nasolacrimal duct",
+    	{
+		"order":"11",
+		"title":"Tool for retrograde filling of nasolacrimal duct",
         "number":"90330",
         "year":"20/01/2010"
     	},
-    	{"title":"Method of diagnosis of Eustachian tube dysfunction",
+    	{
+		"order":"12",
+		"title":"Method of diagnosis of Eustachian tube dysfunction",
         "number":"2342072",
         "year":"27/12/2008"
     	},
-    	{"title":"Device for precise measurement of objects dimensions during endoscopic examination",
+    	{
+		"order":"13",
+		"title":"Device for precise measurement of objects dimensions during endoscopic examination",
         "number":"73184",
         "year":"20/05/2008"
     	},
-    	{"title":"Composition for prevention of fogging and icing of medical equipment",
+    	{
+		"order":"14",
+		"title":"Composition for prevention of fogging and icing of medical equipment",
         "number":"2320692",
         "year":"27/03/2008"
     	},
-    	{"title":"Device for Eustachian tube autoinflation",
+    	{
+		"order":"15",
+		"title":"Device for Eustachian tube autoinflation",
         "number":"64070",
         "year":"27/06/2007"
     	},
-    	{"title":"Device for Eustachian tube autoinflation",
+    	{
+		"order":"16",
+		"title":"Device for Eustachian tube autoinflation",
         "number":"56189",
         "year":"10/09/2006"
     	},
-    	{"title":"Device for middle ear treatment",
+    	{
+		"order":"17",
+		"title":"Device for middle ear treatment",
         "number":"46429",
         "year":"10/09/2005"
     	}
