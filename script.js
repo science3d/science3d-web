@@ -1,3 +1,4 @@
+//Declaration
 const navOpen = document.querySelector('.nav-open');
 const container = document.querySelector('.container');
 const aboutW = document.querySelector(".about");
@@ -13,11 +14,18 @@ const aboutB = document.getElementById("about-btn");
 const aboutmeB = document.getElementById("about-me-btn");
 const contactsB = document.getElementById("contacts-btn");
 const patentsB = document.getElementById("patents");
+const papersB = document.getElementById("papers");
+const projectsB = document.getElementById("projects");
+const json_demoB = document.getElementById("json_demo");
+const unity3dB = document.getElementById("unity3d");
+const opencvB = document.getElementById("opencv");
+const vectorB = document.getElementById("vector");
+const graphics3dB = document.getElementById("graphics3d");
+const industrialB = document.getElementById("industrial");
 const backB = document.getElementById("containerGoBack");
 
 
 const tw = TweenLite.fromTo("nav", 3, {opacity: 0, ease: Power2.easeOut}, {opacity: 0.7});
-
 const tl = new TimelineLite({ paused: true, reversed: true });
 const ab = new TimelineLite({ paused: true, reversed: true });
 const ab_me = new TimelineLite({ paused: true, reversed: true });
@@ -27,6 +35,7 @@ const covr = new TimelineLite();
 
 var navButtonAnimation;
 
+//Animation
 covr.to(
 	".cover",
 	100,
@@ -201,7 +210,7 @@ co.to(
 	}
 );
 
-
+//JQuery + GSAP animation:
 $(".nav-button").each(function(index, element){
   var nb = new TimelineLite({})
   nb.to(this, 0.3, {scale:1.5, ease: Back.easeOut.config(2)})
@@ -221,6 +230,8 @@ $(".nav-button").hover(function(){
   navButtonAnimation = this.animation;  
 })
 
+//EventListeners & Navigation:
+
 //navButton.addEventListener("mouseenter", () => {toggleTween(tl);});
 navButton.addEventListener("click", () => {toggleTween(tl);});
 /*
@@ -238,12 +249,32 @@ aboutmeB.addEventListener("click", () => {toggleTween(ab_me);});
 
 covrI.addEventListener("mousemove", () => {covr.reversed() ? covr.play() : covr.reverse();});
 covrI.addEventListener("click", () => {toggleTween(covr);});
-patentsB.addEventListener("click", () => {contain.play();});
+
+document.querySelectorAll("#patents, #papers, #projects, #json_demo, #unity3d, #opencv, #vector, #graphics3d, #industrial").forEach(item => {
+  item.addEventListener('click', event => {
+    contain.play();
+    if (item == patentsB){
+    	document.querySelector(".table-patents").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-patents").style.display = "none"   		
+    };
+    if (item == vectorB) {
+    	document.querySelector(".table-vector").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-vector").style.display = "none"   		
+    };
+  })
+});
+
+
+// patentsB.addEventListener("click", () => {contain.play();});
+
 backB.addEventListener("click", () => {
 	contain.reverse();
 	navigationW.style.pointerEvents = "auto";
 	containW.style.pointerEvents = "none";
 });
+
 //aboutW.addEventListener("mouseleave", () =>{
 //	revA = setTimeout(allAnimReset(), 100);});
 /*

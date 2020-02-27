@@ -123,6 +123,15 @@ h2{
 	padding: 5px;
 	width: 100%;
 	top:5%;
+	display: inline-block;
+}
+
+.table-vector{
+	padding: 5px;
+	width: 100%;
+	top:5%;
+	display: inline-block;
+	align-items: center;
 }
 
 .my-td{
@@ -340,12 +349,9 @@ input[type=submit]:hover {
 	color: white;	
 }
 
-.nav-images{
+.embedded-img{
 	display: flex;
 	justify-content: space-around;
-	width: 100%
-}
-
-.nav-images img{
-	height: 250px;
+	width: 50vmin;
+	opacity: 1;
 }
