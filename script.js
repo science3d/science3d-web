@@ -263,6 +263,36 @@ document.querySelectorAll("#patents, #papers, #projects, #json_demo, #unity3d, #
     	} else {
      	document.querySelector(".table-vector").style.display = "none"   		
     };
+    if (item == papersB) {
+    	document.querySelector(".table-papers").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-papers").style.display = "none"   		
+    };
+    if (item == opencvB) {
+    	document.querySelector(".table-opencv").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-opencv").style.display = "none"   		
+    };
+    if (item == graphics3dB) {
+    	document.querySelector(".table-graphics3d").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-graphics3d").style.display = "none"   		
+    };
+    if (item == unity3dB) {
+    	document.querySelector(".table-unity3d").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-unity3d").style.display = "none"   		
+    };
+    if (item == industrialB) {
+    	document.querySelector(".table-industrial").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-industrial").style.display = "none"   		
+    };
+    if (item == json_demoB) {
+    	document.querySelector(".table-json_demo").style.display = "inline-block"
+    	} else {
+     	document.querySelector(".table-json_demo").style.display = "none"   		
+    };        
   })
 });
 

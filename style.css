@@ -134,6 +134,14 @@ h2{
 	align-items: center;
 }
 
+.table-papers{
+	padding: 5px;
+	width: 100%;
+	top:5%;
+	display: inline-block;
+	align-items: center;
+}
+
 .my-td{
 	padding: 2px;
 	text-align: left;
@@ -352,6 +360,6 @@ input[type=submit]:hover {
 .embedded-img{
 	display: flex;
 	justify-content: space-around;
-	width: 50vmin;
+	width: 25vmin;
 	opacity: 1;
 }
